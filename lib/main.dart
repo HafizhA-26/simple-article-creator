@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_article_creator/utils/theme/theme.dart';
 
 void main() {
   runApp(const ArticleCreator());
@@ -9,8 +10,11 @@ class ArticleCreator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Simple Article Creator',
+      themeMode: ThemeMode.system,
+      theme: CustomTheme.lightTheme,
+      darkTheme: CustomTheme.darkTheme,
       home: Scaffold(),
     );
   }
