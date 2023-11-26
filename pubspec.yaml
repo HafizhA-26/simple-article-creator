@@ -1,5 +1,6 @@
 name: simple_article_creator
-description: Simple Article Creator is a simple application to simulate how you could create a digital article in mobile device and web app.
+description: Simple Article Creator is a simple application to simulate how you
+    could create a digital article in mobile device and web app.
 
 publish_to: "none"
 
@@ -9,16 +10,17 @@ environment:
     sdk: ">=3.1.2 <4.0.0"
 
 dependencies:
+    cupertino_icons: ^1.0.2
     flutter:
         sdk: flutter
-
-    cupertino_icons: ^1.0.2
+    get: ^4.6.6
+    get_storage: ^2.1.1
+    intl: ^0.18.1
 
 dev_dependencies:
+    flutter_lints: ^2.0.0
     flutter_test:
         sdk: flutter
-
-    flutter_lints: ^2.0.0
 
 flutter:
     uses-material-design: true
