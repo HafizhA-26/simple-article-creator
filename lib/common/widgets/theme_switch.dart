@@ -45,7 +45,7 @@ class ThemeSwitch extends StatelessWidget {
           );
         }
         return const Icon(
-          Icons.light_mode_outlined,
+          Icons.light_mode,
           size: 15,
           color: ThemeColors.primary,
         );
