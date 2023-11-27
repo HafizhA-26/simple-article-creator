@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 class DeviceUtils {
   static bool isMobile(BuildContext context) {
-    return MediaQuery.of(context).size.width <= 800;
+    return MediaQuery.of(context).size.width <= 640;
   }
 
   static void hideKeyboard(BuildContext context) {

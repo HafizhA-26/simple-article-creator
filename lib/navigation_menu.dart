@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:provider/provider.dart';
 import 'package:simple_article_creator/common/widgets/theme_switch.dart';
 import 'package:simple_article_creator/utils/constants/colors.dart';
 import 'package:simple_article_creator/utils/device/device.dart';
-import 'package:simple_article_creator/utils/theme/theme.dart';
-import 'package:simple_article_creator/utils/theme/theme_provide.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});

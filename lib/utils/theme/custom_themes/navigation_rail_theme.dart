@@ -6,7 +6,7 @@ class CustomNavigationRailTheme {
       const NavigationRailThemeData(
     selectedIconTheme: IconThemeData(color: ThemeColors.white),
     backgroundColor: ThemeColors.light,
-    indicatorColor: ThemeColors.secondary,
+    indicatorColor: ThemeColors.primary,
   );
   static NavigationRailThemeData darkNavigationRail =
       const NavigationRailThemeData(

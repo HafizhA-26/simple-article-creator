@@ -13,7 +13,7 @@ class ThemeProvider with ChangeNotifier {
 
   ThemeProvider(BuildContext context) {
     _themeData = HelperFunction.isDarkMode(context)
-        ? _themeData
+        ? CustomTheme.darkTheme
         : CustomTheme.lightTheme;
   }
 

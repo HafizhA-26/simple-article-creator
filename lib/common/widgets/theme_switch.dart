@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_article_creator/utils/constants/colors.dart';
 import 'package:simple_article_creator/utils/theme/theme.dart';
-import 'package:simple_article_creator/utils/theme/theme_provide.dart';
+import 'package:simple_article_creator/utils/theme/theme_provider.dart';
 
 class ThemeSwitch extends StatelessWidget {
   const ThemeSwitch({super.key});
