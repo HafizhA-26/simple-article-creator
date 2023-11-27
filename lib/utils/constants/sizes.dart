@@ -19,6 +19,7 @@ class ThemeSizes {
   static const double buttonWidth = 120.0;
 
   static const double appBarHeight = 56.0;
+  static const double bottomBarHeight = 80.0;
   static const double imageThumbHeight = 80.0;
 
   static const double defaultSpace = 24.0;

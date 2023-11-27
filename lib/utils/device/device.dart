@@ -3,6 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class DeviceUtils {
+  static bool isMobile(BuildContext context) {
+    return MediaQuery.of(context).size.width <= 800;
+  }
+
   static void hideKeyboard(BuildContext context) {
     FocusScope.of(context).requestFocus(FocusNode());
   }

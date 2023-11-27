@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:simple_article_creator/utils/constants/colors.dart';
 import 'package:simple_article_creator/utils/theme/custom_themes/appbar_theme.dart';
+import 'package:simple_article_creator/utils/theme/custom_themes/navigation_bar_theme.dart';
 import 'package:simple_article_creator/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:simple_article_creator/utils/theme/custom_themes/checkbox_theme.dart';
 import 'package:simple_article_creator/utils/theme/custom_themes/chip_theme.dart';
 import 'package:simple_article_creator/utils/theme/custom_themes/elevated_button_theme.dart';
+import 'package:simple_article_creator/utils/theme/custom_themes/navigation_rail_theme.dart';
 import 'package:simple_article_creator/utils/theme/custom_themes/outlined_button_theme.dart';
 import 'package:simple_article_creator/utils/theme/custom_themes/text_field_theme.dart';
 import 'package:simple_article_creator/utils/theme/custom_themes/text_theme.dart';
@@ -14,8 +17,11 @@ class CustomTheme {
       useMaterial3: true,
       fontFamily: "Montserrat",
       brightness: Brightness.light,
-      primaryColor: const Color(0xFF1e3799),
-      scaffoldBackgroundColor: Colors.white,
+      colorScheme: const ColorScheme.light(
+          background: ThemeColors.light,
+          primary: ThemeColors.primary,
+          secondary: ThemeColors.secondary),
+      scaffoldBackgroundColor: ThemeColors.white,
       textTheme: CustomTextTheme.lightTextTheme,
       elevatedButtonTheme: CustomElevatedButtonTheme.lightElevatedButtonTheme,
       outlinedButtonTheme: CustomOutlinedButtonTheme.lightOutlinedButtonTheme,
@@ -23,13 +29,19 @@ class CustomTheme {
       appBarTheme: CustomAppBarTheme.lightAppBarTheme,
       checkboxTheme: CustomCheckBoxTheme.lightCheckboxTheme,
       bottomSheetTheme: CustomBottomSheetTheme.lightBottomSheetTheme,
-      inputDecorationTheme: CustomTextFieldTheme.lightInputDecarationTheme);
+      inputDecorationTheme: CustomTextFieldTheme.lightInputDecarationTheme,
+      navigationBarTheme: CustomNavigationBarTheme.lightTheme,
+      navigationRailTheme: CustomNavigationRailTheme.lightNavigationRail);
   static ThemeData darkTheme = ThemeData(
       useMaterial3: true,
       fontFamily: "Montserrat",
       brightness: Brightness.dark,
-      primaryColor: const Color(0xFF1e3799),
-      scaffoldBackgroundColor: const Color(0xFF1e272e),
+      primaryColor: ThemeColors.dark,
+      colorScheme: const ColorScheme.dark(
+          background: ThemeColors.black,
+          primary: ThemeColors.dark,
+          secondary: ThemeColors.secondary),
+      scaffoldBackgroundColor: ThemeColors.black,
       textTheme: CustomTextTheme.dartkTextTheme,
       elevatedButtonTheme: CustomElevatedButtonTheme.darkElevatedButtonTheme,
       outlinedButtonTheme: CustomOutlinedButtonTheme.darkOutlinedButtonTheme,
@@ -37,5 +49,7 @@ class CustomTheme {
       appBarTheme: CustomAppBarTheme.darkAppBarTheme,
       checkboxTheme: CustomCheckBoxTheme.darkCheckboxTheme,
       bottomSheetTheme: CustomBottomSheetTheme.darkBottomSheetTheme,
-      inputDecorationTheme: CustomTextFieldTheme.darkInputDecorationTheme);
+      inputDecorationTheme: CustomTextFieldTheme.darkInputDecorationTheme,
+      navigationBarTheme: CustomNavigationBarTheme.darkTheme,
+      navigationRailTheme: CustomNavigationRailTheme.darkNavigationRail);
 }
