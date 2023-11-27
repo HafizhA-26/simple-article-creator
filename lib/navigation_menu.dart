@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simple_article_creator/common/widgets/theme_switch.dart';
+import 'package:simple_article_creator/presentation/profile/profile.dart';
 import 'package:simple_article_creator/utils/constants/colors.dart';
 import 'package:simple_article_creator/utils/device/device.dart';
 
@@ -74,8 +75,6 @@ class NavigationController extends GetxController {
     Container(
       color: Colors.amber,
     ),
-    Container(
-      color: ThemeColors.accent,
-    ),
+    ProfileScreen(),
   ];
 }
