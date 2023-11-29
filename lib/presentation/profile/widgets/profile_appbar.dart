@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_article_creator/common/widgets/appbar.dart';
 import 'package:simple_article_creator/common/widgets/theme_switch.dart';
-import 'package:simple_article_creator/utils/constants/colors.dart';
 
 class ProfileAppBar extends StatelessWidget {
   const ProfileAppBar({super.key});
@@ -19,7 +18,7 @@ class ProfileAppBar extends StatelessWidget {
           style: Theme.of(context).textTheme.labelMedium!,
         )
       ]),
-      actions: [ThemeSwitch()],
+      actions: const [ThemeSwitch()],
     );
   }
 }

@@ -12,7 +12,6 @@ class CustomElevatedButtonTheme {
     disabledForegroundColor: Colors.grey,
     disabledBackgroundColor: const Color(0xFF4a69bd),
     side: const BorderSide(color: Color(0xFF1e3799)),
-    padding: const EdgeInsets.symmetric(vertical: 18),
     textStyle: CustomTextTheme.lightTextTheme.bodyMedium,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
   ));
@@ -24,7 +23,6 @@ class CustomElevatedButtonTheme {
     disabledForegroundColor: Colors.grey,
     disabledBackgroundColor: const Color(0xFF4a69bd),
     side: const BorderSide(color: Color(0xFF1e3799)),
-    padding: const EdgeInsets.symmetric(vertical: 18),
     textStyle: CustomTextTheme.lightTextTheme.bodyMedium,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
   ));

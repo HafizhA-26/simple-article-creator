@@ -42,7 +42,6 @@ class NavigationMenu extends StatelessWidget {
                         ),
                       ),
                     ),
-                    elevation: 1,
                     onDestinationSelected: (index) =>
                         controller.selectedIndex.value = index,
                     destinations: const [
@@ -67,7 +66,7 @@ class NavigationMenu extends StatelessWidget {
 }
 
 class NavigationController extends GetxController {
-  final Rx<int> selectedIndex = 0.obs;
+  final Rx<int> selectedIndex = 2.obs;
   final screens = [
     Container(
       color: ThemeColors.black,
@@ -75,6 +74,6 @@ class NavigationController extends GetxController {
     Container(
       color: Colors.amber,
     ),
-    ProfileScreen(),
+    const ProfileScreen(),
   ];
 }

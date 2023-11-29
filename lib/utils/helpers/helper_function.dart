@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HelperFunction {
   static void showSnackBar(String message) {
@@ -33,5 +34,24 @@ class HelperFunction {
 
   static Size screenSize() {
     return MediaQuery.of(Get.context!).size;
+  }
+
+  static SizedBox addVerticalMargin(double height) {
+    return SizedBox(
+      height: height,
+    );
+  }
+
+  static SizedBox addHorizontalMargin(double width) {
+    return SizedBox(
+      width: width,
+    );
+  }
+
+  static void launchURL(String urlToLaunch) async {
+    final Uri url = Uri.parse(urlToLaunch);
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
   }
 }
