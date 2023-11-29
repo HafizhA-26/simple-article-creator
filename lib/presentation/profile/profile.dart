@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:simple_article_creator/common/widgets/circle_icon_button.dart';
 import 'package:simple_article_creator/presentation/profile/widgets/horizontal_profil.dart';
 import 'package:simple_article_creator/presentation/profile/widgets/profile_appbar.dart';
-import 'package:simple_article_creator/presentation/profile/widgets/profile_data.dart';
 import 'package:simple_article_creator/presentation/profile/widgets/vertical_profile.dart';
 import 'package:simple_article_creator/utils/device/device.dart';
-import 'package:simple_article_creator/utils/helpers/helper_function.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -38,8 +34,8 @@ class ProfileScreen extends StatelessWidget {
                           offset: const Offset(0, 4))
                     ]),
                 child: DeviceUtils.isMobile(context)
-                    ? VerticalProfile()
-                    : HorizontalProfile()),
+                    ? const VerticalProfile()
+                    : const HorizontalProfile()),
           ),
         ]),
       ),

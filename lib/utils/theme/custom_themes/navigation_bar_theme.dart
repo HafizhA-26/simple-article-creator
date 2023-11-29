@@ -13,13 +13,15 @@ class CustomNavigationBarTheme {
       }
       return const IconThemeData(color: ThemeColors.secondary);
     }),
-    backgroundColor: ThemeColors.white,
+    backgroundColor: ThemeColors.white.withOpacity(1),
+    surfaceTintColor: ThemeColors.white.withOpacity(1),
     indicatorColor: ThemeColors.primary,
+    shadowColor: ThemeColors.black,
     labelTextStyle: MaterialStatePropertyAll<TextStyle>(CustomTextTheme
         .lightTextTheme.labelMedium!
         .copyWith(color: ThemeColors.primary, fontWeight: FontWeight.w400)),
     height: ThemeSizes.bottomBarHeight,
-    elevation: 1,
+    elevation: 5,
   );
   static NavigationBarThemeData darkTheme = NavigationBarThemeData(
       iconTheme: MaterialStateProperty.resolveWith<IconThemeData>(
@@ -32,8 +34,10 @@ class CustomNavigationBarTheme {
       labelTextStyle: MaterialStatePropertyAll<TextStyle>(CustomTextTheme
           .lightTextTheme.labelMedium!
           .copyWith(color: ThemeColors.white, fontWeight: FontWeight.w400)),
-      backgroundColor: ThemeColors.dark,
+      backgroundColor: ThemeColors.dark.withOpacity(1),
+      surfaceTintColor: ThemeColors.dark.withOpacity(1),
       indicatorColor: ThemeColors.secondary,
+      shadowColor: ThemeColors.darkGrey,
       height: ThemeSizes.bottomBarHeight,
-      elevation: 1);
+      elevation: 5);
 }

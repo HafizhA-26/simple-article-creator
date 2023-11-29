@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_article_creator/common/widgets/circle_icon_button.dart';
 import 'package:simple_article_creator/presentation/profile/widgets/profile_data.dart';
-import 'package:simple_article_creator/utils/device/device.dart';
 import 'package:simple_article_creator/utils/helpers/helper_function.dart';
 
 class VerticalProfile extends StatelessWidget {

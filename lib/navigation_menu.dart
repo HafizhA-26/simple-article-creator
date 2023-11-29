@@ -69,7 +69,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 2.obs;
   final screens = [
     Container(
-      color: ThemeColors.black,
+      color: ThemeColors.white,
     ),
     Container(
       color: Colors.amber,

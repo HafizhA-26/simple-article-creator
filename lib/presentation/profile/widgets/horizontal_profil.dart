@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_article_creator/common/widgets/circle_icon_button.dart';
 import 'package:simple_article_creator/presentation/profile/widgets/profile_data.dart';
-import 'package:simple_article_creator/utils/device/device.dart';
 import 'package:simple_article_creator/utils/helpers/helper_function.dart';
 
 class HorizontalProfile extends StatelessWidget {
@@ -14,7 +13,6 @@ class HorizontalProfile extends StatelessWidget {
     final colorTheme = Theme.of(context).colorScheme;
     return LayoutBuilder(builder: (context, constraints) {
       final paddingRatio = constraints.maxWidth / 1316;
-      print(constraints.maxHeight);
       return Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
