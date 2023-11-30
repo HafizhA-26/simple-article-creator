@@ -4,7 +4,6 @@ import 'package:simple_article_creator/common/widgets/theme_switch.dart';
 import 'package:simple_article_creator/presentation/creator/article_creator.dart';
 import 'package:simple_article_creator/presentation/home/home.dart';
 import 'package:simple_article_creator/presentation/profile/profile.dart';
-import 'package:simple_article_creator/utils/constants/colors.dart';
 import 'package:simple_article_creator/utils/device/device.dart';
 
 class NavigationMenu extends StatelessWidget {

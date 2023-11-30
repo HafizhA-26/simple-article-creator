@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simple_article_creator/domain/article.dart';
-import 'package:simple_article_creator/utils/constants/colors.dart';
 import 'package:simple_article_creator/utils/helpers/helper_function.dart';
 
 class CardArticle extends StatelessWidget {
