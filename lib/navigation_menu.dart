@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simple_article_creator/common/widgets/theme_switch.dart';
+import 'package:simple_article_creator/presentation/creator/article_creator.dart';
 import 'package:simple_article_creator/presentation/profile/profile.dart';
 import 'package:simple_article_creator/utils/constants/colors.dart';
 import 'package:simple_article_creator/utils/device/device.dart';
@@ -66,14 +67,12 @@ class NavigationMenu extends StatelessWidget {
 }
 
 class NavigationController extends GetxController {
-  final Rx<int> selectedIndex = 2.obs;
+  final Rx<int> selectedIndex = 1.obs;
   final screens = [
     Container(
       color: ThemeColors.white,
     ),
-    Container(
-      color: Colors.amber,
-    ),
+    const ArticleCreator(),
     const ProfileScreen(),
   ];
 }

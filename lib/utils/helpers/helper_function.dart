@@ -54,4 +54,15 @@ class HelperFunction {
       throw Exception('Could not launch $url');
     }
   }
+
+  static List<String> chipStringExtract(
+      List<String> inputString, List<bool> inputSelected) {
+    List<String> extractedList = [];
+    for (var i = 0; i < inputSelected.length; i++) {
+      if (inputSelected[i]) {
+        extractedList.add(inputString[i]);
+      }
+    }
+    return extractedList;
+  }
 }

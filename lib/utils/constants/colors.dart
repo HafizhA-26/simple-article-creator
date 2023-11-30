@@ -4,7 +4,7 @@ class ThemeColors {
   ThemeColors._();
   static const Color primary = Color(0xFF1e3799);
   static const Color secondary = Color(0xFF4a69bd);
-  static const Color accent = Color(0xFF38ada9);
+  static const Color accent = Color(0xFF78e08f);
 
   static const Gradient primaryGradient = LinearGradient(
       colors: [Color(0xFF4a69bd), Color(0xFF1e3799), Color(0xFF0c2461)],
