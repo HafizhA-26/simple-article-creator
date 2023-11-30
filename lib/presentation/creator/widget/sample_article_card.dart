@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_article_creator/domain/article.dart';
+import 'package:simple_article_creator/presentation/creator/detail_article.dart';
 import 'package:simple_article_creator/utils/helpers/helper_function.dart';
 
 class CardArticle extends StatelessWidget {
@@ -17,7 +18,13 @@ class CardArticle extends StatelessWidget {
       height: 120,
       margin: const EdgeInsets.only(bottom: 10),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          HelperFunction.navigateToScreen(
+              context,
+              DetailArticleScreen(
+                article: article,
+              ));
+        },
         child: Card(
           surfaceTintColor: surfaceTintColor,
           color: surfaceTintColor,

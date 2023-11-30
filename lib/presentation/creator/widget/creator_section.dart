@@ -5,6 +5,7 @@ import 'package:simple_article_creator/common/widgets/rich_text_editor.dart';
 import 'package:simple_article_creator/common/widgets/rounded_rectangle_button.dart';
 import 'package:simple_article_creator/common/widgets/text_field_type_1.dart';
 import 'package:simple_article_creator/domain/article.dart';
+import 'package:simple_article_creator/presentation/creator/detail_article.dart';
 import 'package:simple_article_creator/utils/constants/colors.dart';
 import 'package:simple_article_creator/utils/constants/sizes.dart';
 import 'package:simple_article_creator/utils/helpers/helper_function.dart';
@@ -134,10 +135,18 @@ class _CreatorSectionState extends State<CreatorSection> {
                   if (formKey.currentState!.validate()) {
                     HelperFunction.showSnackBar("Berhasil");
                     Article newArticle = Article(
-                        title: titleController.text.toString(),
-                        content: contentController.document.toPlainText(),
-                        categories: HelperFunction.chipStringExtract(
-                            categories, useCategories));
+                      title: titleController.text.toString(),
+                      content: contentController.document.toPlainText(),
+                      categories: HelperFunction.chipStringExtract(
+                        categories,
+                        useCategories,
+                      ),
+                      creator: "Anonymous",
+                      createdAt: DateTime.now(),
+                      updatedAt: DateTime.now(),
+                    );
+                    HelperFunction.navigateToScreen(
+                        context, DetailArticleScreen(article: newArticle));
                   }
                 },
                 backgroundColor: ThemeColors.success,

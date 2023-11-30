@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_article_creator/domain/article.dart';
+import 'package:simple_article_creator/presentation/creator/detail_article.dart';
 import 'package:simple_article_creator/presentation/creator/widget/sample_article_card.dart';
 import 'package:simple_article_creator/utils/constants/sizes.dart';
 import 'package:simple_article_creator/utils/helpers/helper_function.dart';
@@ -35,7 +36,9 @@ class SampleArticles extends StatelessWidget {
             HelperFunction.addVerticalMargin(ThemeSizes.md),
             Column(
               children: List.generate(articles.length, (index) {
-                return CardArticle(article: articles[index]);
+                return CardArticle(
+                  article: articles[index],
+                );
               }),
             )
           ],

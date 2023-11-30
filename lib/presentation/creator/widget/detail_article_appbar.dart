@@ -2,18 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:simple_article_creator/common/widgets/appbar.dart';
 import 'package:simple_article_creator/common/widgets/theme_switch.dart';
 
-class ArticleAppbar extends StatelessWidget {
-  const ArticleAppbar({super.key});
+class DetailArticleAppbar extends StatelessWidget {
+  const DetailArticleAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CustomAppBar(
+      leadingIcon: Icons.arrow_back,
+      leadingOnPressed: () {
+        Navigator.of(context).pop();
+      },
       title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Article Creator",
+              "Detail Article",
               style: Theme.of(context).textTheme.titleMedium!,
             ),
           ]),
