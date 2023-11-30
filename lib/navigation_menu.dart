@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simple_article_creator/common/widgets/theme_switch.dart';
 import 'package:simple_article_creator/presentation/creator/article_creator.dart';
+import 'package:simple_article_creator/presentation/home/home.dart';
 import 'package:simple_article_creator/presentation/profile/profile.dart';
 import 'package:simple_article_creator/utils/constants/colors.dart';
 import 'package:simple_article_creator/utils/device/device.dart';
@@ -21,8 +22,7 @@ class NavigationMenu extends StatelessWidget {
                       controller.selectedIndex.value = index,
                   destinations: const [
                     NavigationDestination(
-                        icon: Icon(Icons.text_snippet_outlined),
-                        label: "Articles"),
+                        icon: Icon(Icons.home), label: "Articles"),
                     NavigationDestination(
                         icon: Icon(Icons.draw), label: "Create"),
                     NavigationDestination(
@@ -47,8 +47,7 @@ class NavigationMenu extends StatelessWidget {
                         controller.selectedIndex.value = index,
                     destinations: const [
                       NavigationRailDestination(
-                          icon: Icon(Icons.text_snippet_outlined),
-                          label: Text("Articles")),
+                          icon: Icon(Icons.home), label: Text("Articles")),
                       NavigationRailDestination(
                           icon: Icon(Icons.draw),
                           label: Text(
@@ -67,11 +66,9 @@ class NavigationMenu extends StatelessWidget {
 }
 
 class NavigationController extends GetxController {
-  final Rx<int> selectedIndex = 1.obs;
+  final Rx<int> selectedIndex = 0.obs;
   final screens = [
-    Container(
-      color: ThemeColors.white,
-    ),
+    const HomeScreen(),
     const ArticleCreator(),
     const ProfileScreen(),
   ];
