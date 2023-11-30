@@ -17,7 +17,7 @@ class ArticleCreator extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          if (DeviceUtils.isMobile(context)) ArticleAppbar(),
+          if (DeviceUtils.isMobile(context)) const ArticleAppbar(),
           Container(
             constraints: BoxConstraints(
                 minHeight: DeviceUtils.getScreenHeight(),

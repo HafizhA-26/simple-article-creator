@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simple_article_creator/domain/article.dart';
-import 'package:simple_article_creator/presentation/creator/detail_article.dart';
 import 'package:simple_article_creator/presentation/creator/widget/sample_article_card.dart';
 import 'package:simple_article_creator/utils/constants/sizes.dart';
 import 'package:simple_article_creator/utils/helpers/helper_function.dart';

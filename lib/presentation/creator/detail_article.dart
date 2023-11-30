@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:simple_article_creator/common/widgets/category_chip.dart';
 import 'package:simple_article_creator/domain/article.dart';
 import 'package:simple_article_creator/presentation/creator/widget/detail_article_appbar.dart';
 import 'package:simple_article_creator/utils/constants/colors.dart';
