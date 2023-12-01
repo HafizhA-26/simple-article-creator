@@ -32,30 +32,42 @@ class NavigationMenu extends StatelessWidget {
       body: Obx(() => Row(
             children: [
               if (!DeviceUtils.isMobile(context))
-                NavigationRail(
-                    trailing: const Expanded(
-                      child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Padding(
-                          padding: EdgeInsets.only(bottom: 10),
-                          child: ThemeSwitch(),
-                        ),
+                LayoutBuilder(builder: (context, constraints) {
+                  return SingleChildScrollView(
+                    child: ConstrainedBox(
+                      constraints:
+                          BoxConstraints(minHeight: constraints.maxHeight),
+                      child: IntrinsicHeight(
+                        child: NavigationRail(
+                            trailing: const Expanded(
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Padding(
+                                  padding: EdgeInsets.only(bottom: 10),
+                                  child: ThemeSwitch(),
+                                ),
+                              ),
+                            ),
+                            onDestinationSelected: (index) =>
+                                controller.selectedIndex.value = index,
+                            destinations: const [
+                              NavigationRailDestination(
+                                  icon: Icon(Icons.home),
+                                  label: Text("Articles")),
+                              NavigationRailDestination(
+                                  icon: Icon(Icons.draw),
+                                  label: Text(
+                                    "Create",
+                                  )),
+                              NavigationRailDestination(
+                                  icon: Icon(Icons.badge),
+                                  label: Text("My Profile"))
+                            ],
+                            selectedIndex: controller.selectedIndex.value),
                       ),
                     ),
-                    onDestinationSelected: (index) =>
-                        controller.selectedIndex.value = index,
-                    destinations: const [
-                      NavigationRailDestination(
-                          icon: Icon(Icons.home), label: Text("Articles")),
-                      NavigationRailDestination(
-                          icon: Icon(Icons.draw),
-                          label: Text(
-                            "Create",
-                          )),
-                      NavigationRailDestination(
-                          icon: Icon(Icons.badge), label: Text("My Profile"))
-                    ],
-                    selectedIndex: controller.selectedIndex.value),
+                  );
+                }),
               Expanded(
                   child: controller.screens[controller.selectedIndex.value]),
             ],

@@ -15,24 +15,27 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         height: DeviceUtils.getScreenHeight(),
         child: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Text(
-              "Welcome !",
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineLarge!
-                  .apply(fontSizeFactor: 2),
-            ),
-            HelperFunction.addVerticalMargin(20),
-            SizedBox(
-                width: 500,
-                child: Text(
-                  "This is a simple article creator, this app can create a static article but can't save it",
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headlineMedium!.apply(
-                      fontWeightDelta: -2, fontSizeFactor: fontSizeFactor),
-                ))
-          ]),
+          child: SingleChildScrollView(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                "Welcome !",
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineLarge!
+                    .apply(fontSizeFactor: 2),
+              ),
+              HelperFunction.addVerticalMargin(20),
+              SizedBox(
+                  width: 500,
+                  child: Text(
+                    "This is a simple article creator, this app can create a static article but can't save it",
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headlineMedium!.apply(
+                        fontWeightDelta: -2, fontSizeFactor: fontSizeFactor),
+                  ))
+            ]),
+          ),
         ),
       );
     });
